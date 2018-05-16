@@ -143,21 +143,21 @@ type(of:x) // UInt8 로 추론
 
 > Ternary Operator (삼항 연산자)
 - Swift 에서 삼항 연산자는 단 하나
-	`a > 0 ? "positive" : "negative" // a 가 0 보다 크면 positive 작으면 negative`
+	- `a > 0 ? "positive" : "negative" // a 가 0 보다 크면 positive 작으면 negative`
 
 > Assignment Operators
 - Basic assignment operator
-	`var value = 0`
+	- `var value = 0`
 - Addition assignment operator
-	`value = value + 10`
+	- `value = value + 10`
 - Subraction assignment operator
-	`value = value - 5`
+	- `value = value - 5`
 - Multiplication assignment operator
-	`value = value * 2`
+	- `value = value * 2`
 - Division assignment operator
-	`value = value / 2`
+	- `value = value / 2`
 - Modulo assignment operator
-	`value = value % 2`
+	- `value = value % 2`
 - Compound Assignment Operators
 	```
 	value += 10
@@ -169,21 +169,21 @@ type(of:x) // UInt8 로 추론
 
 > Overflow
 - overflow 연산하고 싶을 때 & 사용
-	` var add : Int8 = Int8.max &+ 1`
+	- ` var add : Int8 = Int8.max &+ 1`
 
 > Comparison Operators
 - Equal to operator
-	`a == b`
+	- `a == b`
 - Not equal to operator
-	`a != b`
+	- `a != b`
 - Greater than operator
-	`a > b`
+	- `a > b`
 - Greater than or equal to operator
-	`a >= b`
+	- `a >= b`
 - Less than operator
-	`a < b`
+	- `a < b`
 - Less than or equal to operator
-	`a <= b`
+	- `a <= b`
 
 > Logical Operators
 - Logical AND Operator
@@ -210,13 +210,13 @@ type(of:x) // UInt8 로 추론
 	```
 >Range Operators
 - Closed Range Operator
-	`0...100` :  0~100 
+	- `0...100` :  0~100 
 - Half-Open Range Operator
-	`0..<100` : 0~99
+	- `0..<100` : 0~99
 - One-Sided Ranges
-	`1...` : 1~
-	`...100` : ~100까지
-	`..<100` : ~99까지
+	- `1...` : 1~
+	- `...100` : ~100까지
+	- `..<100` : ~99까지
 
 #### 8. Function
 >일련의 작업을 수행하는 코드 묶음을 식별할 수 있는 특정한 이름을 부여하여 사용하는 것
