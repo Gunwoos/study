@@ -143,22 +143,21 @@ type(of:x) // UInt8 로 추론
 
 > Ternary Operator (삼항 연산자)
 - Swift 에서 삼항 연산자는 단 하나
-`a > 0 ? "positive" : "negative" // a 가 0 보다 크면 positive 작으면 negative`
+	`a > 0 ? "positive" : "negative" // a 가 0 보다 크면 positive 작으면 negative`
 
 > Assignment Operators
-
 - Basic assignment operator
-`var value = 0`
+	`var value = 0`
 - Addition assignment operator
-`value = value + 10`
+	`value = value + 10`
 - Subraction assignment operator
-`value = value - 5`
+	`value = value - 5`
 - Multiplication assignment operator
-`value = value * 2`
+	`value = value * 2`
 - Division assignment operator
-`value = value / 2`
+	`value = value / 2`
 - Modulo assignment operator
-`value = value % 2`
+	`value = value % 2`
 - Compound Assignment Operators
 	```
 	value += 10
@@ -174,17 +173,17 @@ type(of:x) // UInt8 로 추론
 
 > Comparison Operators
 - Equal to operator
-`a == b`
+	`a == b`
 - Not equal to operator
-`a != b`
+	`a != b`
 - Greater than operator
-`a > b`
+	`a > b`
 - Greater than or equal to operator
-`a >= b`
+	`a >= b`
 - Less than operator
-`a < b`
+	`a < b`
 - Less than or equal to operator
-`a <= b`
+	`a <= b`
 
 > Logical Operators
 - Logical AND Operator
@@ -211,13 +210,117 @@ type(of:x) // UInt8 로 추론
 	```
 >Range Operators
 - Closed Range Operator
-`0...100` 0~100 
+	`0...100` :  0~100 
 - Half-Open Range Operator
-`0..<100` 0~99
+	`0..<100` : 0~99
 - One-Sided Ranges
-`1...`
-`...100`
-`..<100`
+	`1...` : 1~
+	`...100` : ~100까지
+	`..<100` : ~99까지
 
 #### 8. Function
+>일련의 작업을 수행하는 코드 묶음을 식별할 수 있는 특정한 이름을 부여하여 사용하는 것
+- Input 과 Output 이 모두 있는 것 (Function)
+	```
+	func getNum(num:Int)-> Int{ // getNum() Int 형을 받음
+		var a : Int = 10
+		return a // output a 
+	}
+	```
+- Input 이 없고 Output 만 있는 것 (Generator)
+	```
+	func getNum()->Int{
 
+		return a
+	}
+	```
+- Input 이 있고 Output 은 없는 것 (Consumer)
+ 	```
+	func getNum(num : Int){
+
+	}
+	```
+- Input 과 Output 이 모두 없는 것
+ 	```
+	func getNum(){
+
+	}
+	```
+
+>Argument Labels and Parameter Names
+```
+func someFunction(firstParameterName : Int, secondParameterName : Int){
+	print(firstParameterName, secondParameterName)
+}
+```
+- Argument Labels : 함수 밖에서 불리는 이름 
+	ex) firstParameterName, secondParameterName 
+- Parameter Names : 변수 타입
+	ex) Int Double String etc...
+
+> Parameter
+- 매개변수 = 인자 = Parameter
+- 인수를 담는 변수의 한 종류로서 해당 함수 내부 스코프에만 영향
+- 대부분 call by value 가 기본
+- call by reference 는 호출할 때 사용한 전달인자에까지 영향
+
+> Argument
+- 전달인자 = 인수 = 실인수 = Argument
+- 함수 호출 시 그에 필요한 데이터를 전달
+
+
+Q. Argument Labels 와 Parameter Names 를 다르게 하는 이유?
+`- 동일하게 지정하면 함수 밖에서 사용하거나 협업하는 타인이 코드를 볼 때 무슨 내용인지 이해하기 쉽지 않기 때문에 이름을 다르게 하여 코드 내용의 이해를 돕기 위해 `
+
+>Omitting Argument Labels
+- Argument Label 의 생략이 가능한 경우 _ 를 사용하여 생략
+```
+func someFunction(_ firstParameterName : Int, secondParameterName : Int){
+
+}
+someFunction(10, secondParameterName: 29)
+```
+
+>Default Parameter Values
+- 기본값 주기
+	```
+	func someFunction(first : Int = 10, second : Int){
+
+	}
+
+	someFunction(second : 20) // first에 자동으로 10이 들어감
+	```
+
+>Variadic Parameters
+- 같은 타입의 변수를 하나 이상 입력할 때 사용
+```
+func getGrade(_ score : Double...)->Double{
+	var total=0.0
+	for number in score{
+		total+=number
+	}
+	return total/Double(score.count)
+}
+
+getGrade(4.5, 4.0, 4.4, 4.1)
+```
+
+>Nested Functions
+- 외부에는 숨기고 함수 내부에서만 사용할 함수를 중첩하여 사용 가능
+```
+func outsideFunction(){
+	func inside1Function(){
+
+	}
+	func inside2Function(){
+	
+	}
+
+	if {
+		inside1Function()
+	}
+	else {
+		inside2Function()
+	}
+}
+```
