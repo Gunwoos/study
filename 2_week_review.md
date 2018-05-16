@@ -1,6 +1,7 @@
 # Swift
 
 ### Basic
+---
 #### 1. Hello, world
 > Comment 주석
 - // : 한 줄 주석
@@ -44,6 +45,14 @@ let `let`=1
 - 변수로 사용 할 수 없는 이름
 ```
 - 같은 스코프 범위 내에서 중복되는 이름
+	스코프 <- 같은 영역
+	let a = 1
+	let a = 2  (x)
+
+	let a = 1
+	func add(){
+		let a = 2
+	} (o)
 - 공백
 - 수학 기호
 - 화살표
@@ -72,11 +81,143 @@ var weight = 66.7 // Double 로 추론
 - `type(of:index)` : index의 타입 확인 가능
 
 #### 5. Literals & Types
-- 상수 : 고정된 값을 가지는 심볼 또는 식별자
+- 상수 : 고정된 값 (메모리 주소) 을 가지는 심볼 또는 식별자
 -  리터럴
 	- 고정된 값으로 표현되는 문자 (데이터) 그 자체
 	- 정수/실수/문자/문자열/불리언 리터럴 등
-#### 6. Type Conversion
+
+> Typealias
+- 문맥상 더 적절한 이름으로 기존 타입의 이름을 참조하여 사용하고 싶을 경우 사용
+`typealias type name = type expression`
+
+ex) 
+```
+typealias AudioSample = UInt16
+
+var maxAmplitudeFOund = Audio.Sample.min
+
+```
+
+#### 6. Type Conversion (타입 변환)
+```
+var num = 10
+var doubleNum=Double(num) // Double로 변환
+
+var i = 20
+var j = 5.6
+var k = 0.0
+
+k = j * Double(i) // int 와 double 연산 하는 방법
+```
+- 서로 다른 타입은 비교하거나 연산 불가
+```
+let h = UInt8(25)
+let x = 10 * h
+type(of:x) // UInt8 로 추론
+```
+- 위 코드가 실행되는 이유는 10 이라는 상수가 타입이 명시 되어있지 않기 때문에 h의 타입인 UInt8 로 추론되어 * 연산이 되기 때문
+
+> 양수 사용 시 Int / UInt 중 어느 것이 좋을까?
+- Int - why?
+	- 연산 중 음수가 나오는 경우도 있으므로 안전성이나 사용성, 타입 추론, 변환 등 에서 Int 가 유리함
+- magnitude 와 abs 의 차이점
+	- magnitude는 UInt 으로, abs는 Int 로
+	- abs 가 절대값을 구할 때 더 편함, abs는 항상 같은 타입으로 반환해주기 때문에
+
+
 #### 7. Basic Operators
+> Unary Operator (단항 연산자)
+- `-a // 항 하나만으로 연산 가능`
+
+> Prefix (전위 표기법)
+- `-a // 변수 앞에 연산자를 표기`
+
+> Postfix (후위 표기법)
+- `c! // 변수 뒤에 연산자를 표기`
+
+> Binary Operator (이항 연산자)
+- `a + b // 항이 두가지 있어야 연산 가능`
+
+> Infix (중위 표기법)
+- `a + b // 항 사이에 표기`
+
+> Ternary Operator (삼항 연산자)
+- Swift 에서 삼항 연산자는 단 하나
+`a > 0 ? "positive" : "negative" // a 가 0 보다 크면 positive 작으면 negative`
+
+> Assignment Operators
+
+- Basic assignment operator
+`var value = 0`
+- Addition assignment operator
+`value = value + 10`
+- Subraction assignment operator
+`value = value - 5`
+- Multiplication assignment operator
+`value = value * 2`
+- Division assignment operator
+`value = value / 2`
+- Modulo assignment operator
+`value = value % 2`
+- Compound Assignment Operators
+	```
+	value += 10
+	value -= 5
+	value *= 2
+	value /= 2
+	value %= 2
+	```
+
+> Overflow
+- overflow 연산하고 싶을 때 & 사용
+	` var add : Int8 = Int8.max &+ 1`
+
+> Comparison Operators
+- Equal to operator
+`a == b`
+- Not equal to operator
+`a != b`
+- Greater than operator
+`a > b`
+- Greater than or equal to operator
+`a >= b`
+- Less than operator
+`a < b`
+- Less than or equal to operator
+`a <= b`
+
+> Logical Operators
+- Logical AND Operator
+	- 둘 다 참이여야 참
+	```
+	true && true //t
+	true && false //f
+	false && true //f
+	false && false //f
+	```
+- Logical OR Operator
+	- 둘 중 하나만 참이어도 참
+	```
+	true || true //t
+	true || false  //t
+	false || true //t
+	false || false //f
+	```
+- Logical Negation Operator
+	- 부정
+	```
+	!true //f
+	!false //t
+	```
+>Range Operators
+- Closed Range Operator
+`0...100` 0~100 
+- Half-Open Range Operator
+`0..<100` 0~99
+- One-Sided Ranges
+`1...`
+`...100`
+`..<100`
+
 #### 8. Function
 
