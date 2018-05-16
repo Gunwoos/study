@@ -324,3 +324,133 @@ func outsideFunction(){
 	}
 }
 ```
+
+#### 9. Conditional Statements
+>If문
+- if문 형식
+	```
+	if 조건 {
+		코드
+	}
+	else if 조건 {
+		코드
+	}
+	else {
+		코드
+	}
+	```
+
+- if문 에서는 " , " 는 AND 랑 의미가 동일
+
+>switch문
+- switch문 형식
+	```
+	switch index{
+	case index1:
+		index1 에 관한 코드
+	case index2:
+		index2 에 관한 코드
+	case index3:
+		index3 에 관한 코드
+	default:
+		default 에 관한 코드
+	}
+	```
+- character 타입도 사용 가능
+```
+let alphabet: Character = "a"
+
+switch  alphabet {
+case  "a":
+	print("The first letter of the alphabet")
+case  "z":
+	print("The last letter of the alphabet")
+default: // Invalid, the case has an empty body
+	break//  print("Some other character")
+}
+```
+- Interval Matching
+```
+let approximateCount = 30
+
+switch  approximateCount {
+case 0...50:
+	print("0 ~ 50")
+case  51...100:
+	print("51 ~ 100")
+default:
+	print("Something else")
+}
+```
+- Compound Cases
+```
+case "a", "e", "c"
+```
+- switch 에서는 " , " 는 OR 을 뜻한다
+
+> Value binding
+```
+let stillAnotherPoint = (9, 0)
+
+switch  stillAnotherPoint {
+case (let distance, 0), (0, let distance): 
+	print("On an axis, \(distance) from the origin")
+default:
+	print("Not on an axis")
+}
+```
+
+- 변수명으로 변수 값을 대신함으로 써 변수명을 사용한 자리는 신경쓰지 않겠다는 것을 의미
+
+>no default case
+```
+let isTure:true
+
+switch isTure{
+case true:
+	print("t")
+case false:
+	print("f")
+}
+```
+- ture or false 는 값이 둘중 하나 이므로 default 를 사용하면 error 가 난다
+
+>fallthrough
+-swift의 switch문은 break가 생략되어있어 break 기능을 사용하고 싶지 않을 때 사용
+```
+switch index{
+case 1:
+	print("1")
+	fallthrough
+default:
+	print("2")
+}
+```
+
+
+> guard문
+
+- guard문 형식
+
+```
+func update(age:Int){
+	guard 0...100 ~= age, age == 100
+	else {
+		return
+	}
+	print("Pass")
+}
+```
+
+- if문 코드의 간결화
+
+#### 10. Loops
+
+
+#### 11. Tuples
+
+
+#### 12. ControlTransfer
+
+
+#### 13. Enumerations 
