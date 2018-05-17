@@ -1,23 +1,22 @@
-/*
- ```## Question
- - 두 개의 정수를 입력받아 두 수를 하나로 합친 결과를 출력하는 함수 (1, 5 입력 시 15 반환)
- - 문자열 두 개를 입력받아 두 문자열이 같은지 여부를 판단해주는 함수
- - 학점을 입력받아 각각의 등급을 반환해주는 함수 (4.5 = A+,  4.0 = A, 3.5 = B+ ...)
- - 여러 등급을 입력받아 그 학점의 평균을 반환해주는 함수
- - 윤년 구하기 (2월 29일이 있는 해.  매 4년 마다 윤년. 매 100년 째에는 윤년이 아님. 매 400년 째에는 윤년)
- - 세 수를 입력받아 세 수의 곱이 양수이면 true , 음수이면 false 반환하는 함수
- - 특정한 달을 숫자로 입력 받아 문자로 반환해주는 함수 (1 = "Jan" , 2 = "Feb")```
-*/
+# Question
+- 두 개의 정수를 입력받아 두 수를 하나로 합친 결과를 출력하는 함수 (1, 5 입력 시 15 반환)
+- 문자열 두 개를 입력받아 두 문자열이 같은지 여부를 판단해주는 함수
+- 학점을 입력받아 각각의 등급을 반환해주는 함수 (4.5 = A+,  4.0 = A, 3.5 = B+ ...)
+- 여러 등급을 입력받아 그 학점의 평균을 반환해주는 함수
+- 윤년 구하기 (2월 29일이 있는 해.  매 4년 마다 윤년. 매 100년 째에는 윤년이 아님. 매 400년 째에는 윤년)
+- 세 수를 입력받아 세 수의 곱이 양수이면 true , 음수이면 false 반환하는 함수
+- 특정한 달을 숫자로 입력 받아 문자로 반환해주는 함수 (1 = "Jan" , 2 = "Feb")```
 
 1.
-
+```
 func addNum(_ num1 :Int,_ num2 :Int){
     print(String(num1) + String(num2))
 }
 addNum(1,2)
+```
 
 2.
-
+```
 func checkStr(_ Str1:String,_ Str2:String){
     if Str1==Str2{
         print("true")
@@ -27,9 +26,11 @@ func checkStr(_ Str1:String,_ Str2:String){
     }
 }
 checkStr("apple", "e")
+```
 
 3. and 4.
 
+```
 func getGrade(_ score:Double...)->Double{
     var total=0.0
 
@@ -59,9 +60,10 @@ func getGrade(_ score:Double...)->Double{
     return total/Double(score.count)
 }
 getGrade(2.5, 1.0, 4.5, 4.0, 3.0, 3.7, 4.3)
+```
 
 5.
-
+```
 func checkYear(_ year:Int){
     if year%4==0{
         if year%100==0{
@@ -84,9 +86,10 @@ func checkYear(_ year:Int){
 checkYear(196)
 checkYear(200)
 checkYear(400)
+```
 
 6.
-
+```
 func checkNegative(_ num1:Int,_ num2:Int,_ num3:Int)->Bool{
     var isTrue = true
 
@@ -100,9 +103,10 @@ func checkNegative(_ num1:Int,_ num2:Int,_ num3:Int)->Bool{
 }
 
 checkNegative(15, -15, -15)
+```
 
 7. 숫자를 달로 리턴해주는 함수
-
+```
 func getNum(_ num:Int)->String{
     if num==1{
         
@@ -122,10 +126,10 @@ func getNum(_ num:Int)->String{
     
     return "No"
 }
+```
 
 
-/*
-### Question
+# Question
 for , while , repeat - while 등을 활용하여 아래 문제들을 구현해보세요.
 - 1 ~ 9 사이의 숫자를 입력받아 해당 숫자에 해당하는 구구단의 내용을 출력하는 함수
 - 정수 하나를 입력받아 그 수의 Factorial 을 구하는 함수
@@ -135,20 +139,21 @@ for , while , repeat - while 등을 활용하여 아래 문제들을 구현해�
 - 정수 하나를 입력받아 그 정수의 약수를 모두 출력하는 함수
 - 2 이상의 정수를 입력받아, 소수인지 아닌지를 판별하는 함수
 - 정수를 입력받아 입력받은 수에 해당하는 자리의 피보나치 숫자를 반환하는 함수
-*/
 
 
-구구단
+1. 구구단
+```
 func mul(_ num1:Int,_ num2:Int){
     for index in 1...num2{
         print("\(num1) * \(index) = \(num1*index)")
     }
 }
 mul(2,9)
+```
 
 
-Factorial
-
+2.Factorial
+```
 func factorial(_ num1:Int){
     var sum=1
     for index in (1...num1).reversed(){
@@ -158,12 +163,14 @@ func factorial(_ num1:Int){
 }
 
 factorial(3)
+```
 
 3.
 (x)
 
 
 4.
+```
 func addNum(_ num : Int)-> Int{
     var count = 1
     var sum = 0
@@ -188,8 +195,11 @@ func addNum(_ num : Int)-> Int{
 addNum(123)
 addNum(1)
 addNum(6463)
+```
 
 5.
+
+```
 func getNum(_ num1:Int,_ num2:Int,_ min:Int,_ max:Int){
     var minNum:Int; minNum=min
     var maxNum:Int; maxNum=max
@@ -214,9 +224,11 @@ func getNum(_ num1:Int,_ num2:Int,_ min:Int,_ max:Int){
 
 getNum(3,5,1,100)
 getNum(15,17,1,50)
-
+```
 
 6.
+
+```
 func getNum(_ num:Int){
 
     for index in 1...num{
@@ -227,10 +239,11 @@ func getNum(_ num:Int){
 }
 
 getNum(15)
-
+```
 
 7.
 
+```
 func checkNum(_ num:Int){
     var check:Int=0
 
@@ -254,10 +267,11 @@ func checkNum(_ num:Int){
 
 checkNum(17)
 checkNum(100)
-
+```
 
 8.
 
+```
 func checkFibonacci(_ num:Int)->Int{
     var sum:Int=0
     var firstNum=0
@@ -288,3 +302,4 @@ checkFibonacci(1)
 checkFibonacci(2)
 checkFibonacci(5)
 checkFibonacci(7)
+```
