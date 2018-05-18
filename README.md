@@ -2,6 +2,7 @@
 
 > Index
 
-- Markdown 문법 기초
+- Markdown Basic
 - Swift
   - Basic
+  - Collection
