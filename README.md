@@ -2,7 +2,9 @@
 
 > Index
 
+- 컴퓨터 개론
 - Markdown Basic
+- OOP
 - Swift
   - Basic
   - Collection
