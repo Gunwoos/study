@@ -4,10 +4,59 @@
 객체지향 프로그래밍 ( oop ) 이란 캡슐화, 다형성, 상속 을 이용하여 코드의 재사용을 증가시키고, 유지보수를 감소시키는 장점을 얻기 위해서 객체들을 연결시켜 프로그래밍 하는 것
 ```
 > 4대 특징
-- 추상화
-- 캡슐화
-- 상속성
-- 다형성
+- Abstraction (추상화)
+```
+protocol Human {
+	var name: String { get }
+	var age: Int { get }
+	var gender: String { get }
+	var height: Double { get }
+	func sleep()
+	func eat()
+	func walk()
+}
+```
+
+- Encapsulation (캡슐화)
+```
+class Person{
+	private birthday : Int = 950228
+	
+	private func study(){
+		code
+	}
+	func goSchool(){
+		study()
+	}
+}
+```
+
+- Inheritance (상속)
+```
+class car{
+	var wheel : Int = 4
+	func move(){
+	}
+	func stop(){
+	}
+}
+class autoCar : car {
+		
+}
+class  manualCar: car {
+
+}
+final class bus : manualCar {
+
+}
+```
+
+- Polymorphism (다형성)
+	- Overloading
+	- Overriding
+```
+
+```
 
 > 객체의 구성
 ```
