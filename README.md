@@ -9,5 +9,6 @@
 #### Swift
 - [Basic](https://github.com/Gunwoos/study/blob/master/Swift_Basic.md)
 - [Collection](https://github.com/Gunwoos/study/blob/master/Swift_Collection.md)
+- [Enumerations](https://github.com/Gunwoos/study/blob/master/Swift_Enumerations.md)
 - [OOP](https://github.com/Gunwoos/study/blob/master/Swift_OOP.md)
 - [Access Control](https://github.com/Gunwoos/study/blob/master/Swift_Accesscontrol.md)
