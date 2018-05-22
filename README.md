@@ -7,7 +7,7 @@
 - [Markdown Basic](https://github.com/Gunwoos/study/blob/master/MarkDown.md)
 
 #### Swift
-- [Basic](https://github.com/Gunwoos/study/blob/master/Basic.md)
-- [Collection](https://github.com/Gunwoos/study/blob/master/Collection.md)
-- [OOP](https://github.com/Gunwoos/study/blob/master/OOP.md)
-- [Access Control](https://github.com/Gunwoos/study/blob/master/accesscontrol.md)
+- [Basic](https://github.com/Gunwoos/study/blob/master/swift_Basic.md)
+- [Collection](https://github.com/Gunwoos/study/blob/master/swift_Collection.md)
+- [OOP](https://github.com/Gunwoos/study/blob/master/swift_OOP.md)
+- [Access Control](https://github.com/Gunwoos/study/blob/master/swift_Accesscontrol.md)
