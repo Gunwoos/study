@@ -1,7 +1,4 @@
-
-# Swift
-
-### Basic
+# Basic
 ---
 #### 1. Hello, world
 > Comment 주석
