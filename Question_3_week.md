@@ -17,7 +17,7 @@ ex) 테스트 커버리지, 적절하지 못한 객체 모델링 등
   - 하샤드 수 : 자연수 N의 각 자릿수 숫자의 합을 구한 뒤, 그 합한 숫자로 자기 자신이 나누어 떨어지는 수
   ex) 18의 자릿수 합은 1 + 8 = 9이고, 18은 9로 나누어 떨어지므로 하샤드 수.
 ```
-func checkHashard(num : Int){
+func checkHarshad(num : Int){
 	var sum : Int = 0
 	var newNum : Int = num
 	var num1 : Int = 0
@@ -42,10 +42,10 @@ func checkHashard(num : Int){
 	}
 }
   
-checkHashard(num: -18)
-checkHashard(num: 17)
-checkHashard(num: 12)
-checkHashard(num: 1000)
+checkHarshad(num: -18)
+checkHarshad(num: 17)
+checkHarshad(num: 12)
+checkHarshad(num: 1000)
 ```
 
 7. 2개의 정수를 입력했을 때 그에 대한 최소공배수와 최대공약수 구하기
