@@ -98,8 +98,38 @@ final class bus : manualCar {
 	- 상위 클래스의 메소드를 재정의 하여 사용
 	- 동일 요청이 객체에 따라 다르게 응답
 	```
+	class Shape{
+		var color = UIColor.black
+		init(color:UIColor){
+			self.color=color
+		}
+
+		func draw(){
+			print("draw shape")
+		}
+	}
+
+	class Rectangle : Shape{
+		override var color : UIColor{
+		get {
+			return UIColor.red
+		}
+		set{
+			self.color = UIColor.red
+		}
+		override func draw(){
+			super.draw()
 	
+			print("draw rect")
+		}
+	}
+	
+	let rect = Rectangle(color: UIColor.blue)
+	rect.draw()
 	```
+	- super 메소드는 부모클래스의 함수르 호출하여 사용
+	
+	
 - Overloading (오버로딩)
 	- 동일한 이름의 메소드가 매개변수의 이름,  타입, 개수에 따라 다르게 동작
 	```
