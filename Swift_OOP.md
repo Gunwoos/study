@@ -133,6 +133,37 @@ final class bus : manualCar {
 - Overloading (오버로딩)
 	- 동일한 이름의 메소드가 매개변수의 이름,  타입, 개수에 따라 다르게 동작
 	```
+	class circle{
+	    var radius : Int = 0
+	    var color : UIColor
+	    init(){
+		self.radius = 10
+		self.color = UIColor.black
 
+	    }
+	    func getCircle(){
+		self.radius = 10
+		self.color = UIColor.black
+	    }
+	    func getCircle(_ :Int = 10,color:UIColor){
+		self.radius = 10
+		self.color = color
+	    }
+	    func getCircle(radius : Int,_ :UIColor=UIColor.black){
+		self.radius=radius
+		self.color = UIColor.black
+	    }
+	    func getCircle(radius:Int,color:UIColor){
+		self.radius=radius
+		self.color=color
+	    }
+	}
+
+	var newCircle = circle()
+
+	newCircle.getCircle()
+	newCircle.getCircle(color: UIColor.brown)
+	newCircle.getCircle(radius: 20)
+	newCircle.getCircle(radius: 30, color: UIColor.red)
 	```
 
