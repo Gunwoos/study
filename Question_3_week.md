@@ -70,111 +70,99 @@ getNum(num1: -15, num2: 12)
 ```
 8. 선풍기를 동작시키는 과정을 추상화, 캡슐화, 상속 개념 등을 이용해 클래스로 구현해보기
 ```
-public  class fan{
-	var power : Bool = false
-	var wind : Int = 1
-	var turn : Bool = false
-	var time : Int = 0
+public class fan{
+    private var power : Bool = false
+    private var wind : Int = 1
+    private var turn : Bool = false
+    private var time : Int = 0
 
-	private func powerButton(){
-		if self.power==false{
-			self.power=true
-			print("power on")
-		}
-		else{
-			self.power=false
-			self.wind=1
-			self.turn=false
-			self.time=0
-			print("power off")
-		}
-	}
-	
-	private func windButton(){
-		guard  self.power==true  else { return }
-		if self.wind==3{
-			self.wind=1
-		}
-		else{
-			self.wind += 1
-		}
-		print("\(self.wind)단 입니다.")
-	}
 
-	private func turnButton(){
-		guard  self.power==true  else { return }
-		if self.turn==false{
-			self.turn=true
-			print("회전 시작")
-		}
-		else{
-			self.turn=false
-			print("회전 정지")	
-		}
-	}
+    private func powerButton(){
+        if self.power==false{
+            self.power=true
+            print("power on")
+        }
+        else{
+            self.power=false
+            self.wind=1
+            self.turn=false
+            self.time=0
+            print("power off")
+        }
+    }
 
-	private func timeButton(){
-		guard  self.power==true  else { return }
-		if self.time==4{
-			self.time=0
-		}
-		else{
-			self.time += 1
-			print("선풍기 : \(self.time)시간 뒤에 power off.")
-		}
-	}
-	
-	func button(buttonName:String){
-		switch buttonName {
-			case  "powerButton":
-				self.powerButton()
-			case  "windButton":
-				self.windButton()
-			case  "turnButton":
-				self.turnButton()
-			case  "timeButton":
-				self.timeButton()
-			default:
-				return
-		}
-	}
+    private func windButton(){
+        guard self.power==true else { return }
+
+        if self.wind==3{
+            self.wind=1
+        }
+        else{
+            self.wind += 1
+        }
+        print("\(self.wind)단 입니다.")
+    }
+
+    private func turnButton(){
+        guard self.power==true else { return }
+
+        if self.turn==false{
+            self.turn=true
+            print("회전 시작")
+        }
+        else{
+            self.turn=false
+            print("회전 정지")
+        }
+    }
+
+    private func timeButton(){
+        guard self.power==true else { return }
+        if self.time==4{
+            self.time=0
+        }
+        else{
+            self.time += 1
+            print("선풍기 : \(self.time)시간 뒤에 power off.")
+        }
+    }
+
+    func button(buttonName:String){
+        switch buttonName {
+        case "powerButton":
+            self.powerButton()
+        case "windButton":
+            self.windButton()
+        case "turnButton":
+            self.turnButton()
+        case "timeButton":
+            self.timeButton()
+        default:
+            return
+        }
+    }
+    func showFan(){
+        print("-----\npower : \(self.power)\nwind : \(self.wind)\nturn : \(self.turn)\ntime : \(self.time)\n-----")
+    }
 }
 
 var newFan=fan()
-  
+
 newFan.button(buttonName: "windButton")
-newFan.power
-newFan.wind
-newFan.turn
-newFan.time
-  
+newFan.showFan()
+
 newFan.button(buttonName: "powerButton")
-newFan.power
-newFan.wind
-newFan.turn
-newFan.time
-  
+newFan.showFan()
+
 newFan.button(buttonName: "windButton")
-newFan.power
-newFan.wind
-newFan.turn
-newFan.time
-  
+newFan.showFan()
+
 newFan.button(buttonName: "turnButton")
-newFan.power
-newFan.wind
-newFan.turn
-newFan.time
+newFan.showFan()
 
 newFan.button(buttonName: "timeButton")
-newFan.power
-newFan.wind
-newFan.turn
-newFan.time
+newFan.showFan()
 
 newFan.button(buttonName: "powerButton")
-newFan.power
-newFan.wind
-newFan.turn
-newFan.time
+newFan.showFan()
 ```
