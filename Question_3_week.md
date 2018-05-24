@@ -7,11 +7,11 @@ ex) 테스트 커버리지, 적절하지 못한 객체 모델링 등
 
 3. 실습 문제 풀이 (아래 별첨)
 
-4. Codility (https://app.codility.com/programmers/lessons) 에 가입한 뒤 Lesson 2 까지 풀어보기
+4. Codility [Codility](https://app.codility.com/programmers/lessons) 에 가입한 뒤 Lesson 2 까지 풀어보기
 
 5. 다음 가이드라인 읽어오기
-- https://swift.org/documentation/api-design-guidelines/
-- https://github.com/raywenderlich/swift-style-guide
+- [Api_Design_Guidelines](https://swift.org/documentation/api-design-guidelines/)
+- [Swift_Style_Guide]](https://github.com/raywenderlich/swift-style-guide)
 
 6. 하샤드 수 구하기 
   - 하샤드 수 : 자연수 N의 각 자릿수 숫자의 합을 구한 뒤, 그 합한 숫자로 자기 자신이 나누어 떨어지는 수
