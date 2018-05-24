@@ -11,7 +11,7 @@ ex) 테스트 커버리지, 적절하지 못한 객체 모델링 등
 
 5. 다음 가이드라인 읽어오기
 - [Api_Design_Guidelines](https://swift.org/documentation/api-design-guidelines/)
-- [Swift_Style_Guide]](https://github.com/raywenderlich/swift-style-guide)
+- [Swift_Style_Guide](https://github.com/raywenderlich/swift-style-guide)
 
 6. 하샤드 수 구하기 
   - 하샤드 수 : 자연수 N의 각 자릿수 숫자의 합을 구한 뒤, 그 합한 숫자로 자기 자신이 나누어 떨어지는 수
