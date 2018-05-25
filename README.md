@@ -14,3 +14,5 @@
 - [Access Control](https://github.com/Gunwoos/study/blob/master/Swift_Accesscontrol.md)
 - [Optional](https://github.com/Gunwoos/study/blob/master/Swift_Optional.md)
 - [Closure](https://github.com/Gunwoos/study/blob/master/Swift_Closure.md)
+- [Type Casting](https://github.com/Gunwoos/study/blob/master/Swift_Typecasting.md)
+- [Initializer](https://github.com/Gunwoos/study/blob/master/Swift_Initializer.md)
