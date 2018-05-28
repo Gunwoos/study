@@ -17,6 +17,9 @@
 - [Type Casting](https://github.com/Gunwoos/study/blob/master/Swift_Typecasting.md)
 - [Initializer](https://github.com/Gunwoos/study/blob/master/Swift_Initializer.md)
 
+#### IOS App
+- [The App Life Cycle](https://github.com/Gunwoos/study/blob/master/Swift_TheAppLifeCycle.md)
+
 #### Question
 - [1~2 week](https://github.com/Gunwoos/study/blob/master/Question_2_week.md)
 - [3 week](https://github.com/Gunwoos/study/blob/master/Question_3_week.md)
