@@ -18,7 +18,7 @@
 - [Initializer](https://github.com/Gunwoos/study/blob/master/Swift_Initializer.md)
 
 #### IOS App
-- [The App Life Cycle](https://github.com/Gunwoos/study/blob/master/Swift_TheAppLifeCycle.md)
+- [The App Life Cycle](https://github.com/Gunwoos/study/blob/master/IOS_TheAppLifeCycle.md)
 
 #### Question
 - [1~2 week](https://github.com/Gunwoos/study/blob/master/Question_2_week.md)
