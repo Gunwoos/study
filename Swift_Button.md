@@ -32,12 +32,14 @@ class ViewController: UIViewController {
 //        button.backgroundColor = .black
 //        button.setTitleColor(UIColor.cyan, for: .normal)
         
+        // 버튼 1 생성
         newButton.backgroundColor = UIColor.black
         newButton.setTitle("Click", for: .normal)
         newButton.setTitleColor(UIColor.cyan, for: .normal)
         newButton.addTarget(self, action: #selector(buttonClicked ), for: .touchUpInside)
         view.addSubview(newButton)
         
+        //버튼 2 생성
         numButton2.backgroundColor = UIColor.green
         numButton2.setTitle("clicked : \(clickedNum)", for: .normal)
         numButton2.setTitleColor(.blue, for: .normal)
@@ -51,9 +53,10 @@ class ViewController: UIViewController {
 //
 //    }
     
-    @objc func buttonClicked(){
+    @objc func buttonClicked(){ // 첫번째 버튼 클릭 시 생기는 액션
         
         print("button clicked")
+        // 첫번째 버튼을 클릭 시 첫번째 버튼 배경색, 글자색 변경 코드
         if checkColor == 1 {
             checkColor = 0
             self.newButton.backgroundColor = .cyan
@@ -64,11 +67,12 @@ class ViewController: UIViewController {
             self.newButton.backgroundColor = .black
             self.newButton.setTitleColor((UIColor.cyan), for: .normal)
         }
+        // 클릭된 횟수 +1 후 버튼2의 텍스트 초기화
         clickedNum += 1
         numButton2.setTitle("clicked : \(clickedNum)", for: .normal)
     }
     
-    @objc func clickedNumReset(){
+    @objc func clickedNumReset(){ // 두번째 버튼의 클릭된 횟수 변수 초기화
         clickedNum = 0
         numButton2.setTitle("clicked : \(clickedNum)", for: .normal)
     }
