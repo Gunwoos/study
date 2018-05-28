@@ -16,3 +16,8 @@
 - [Closure](https://github.com/Gunwoos/study/blob/master/Swift_Closure.md)
 - [Type Casting](https://github.com/Gunwoos/study/blob/master/Swift_Typecasting.md)
 - [Initializer](https://github.com/Gunwoos/study/blob/master/Swift_Initializer.md)
+
+#### Question
+- [1~2 week](https://github.com/Gunwoos/study/blob/master/Question_2_week.md)
+- [3 week](https://github.com/Gunwoos/study/blob/master/Question_3_week.md)
+- [Button Action](https://github.com/Gunwoos/study/blob/master/Swift_Button.md)
