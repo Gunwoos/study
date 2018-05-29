@@ -19,6 +19,7 @@
 
 #### IOS App
 - [The App Life Cycle](https://github.com/Gunwoos/study/blob/master/IOS_TheAppLifeCycle.md)
+- [Basic](https://github.com/GUnwoos/study/blob/master/IOS_Basic.md)
 
 #### Question
 - [1~2 week](https://github.com/Gunwoos/study/blob/master/Question_2_week.md)
