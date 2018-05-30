@@ -124,6 +124,7 @@ newLabel.text = "입력할 내용"
 view.addSubview(newLabel)
 ```
 #### 응용
+##### - Label 하나를 만들어 +1 버튼 누르면 countNum += 1, reset 버튼 누르면 countNum = 0, alert 액션 버튼 ok - countNum += 1, reset - countNum = 0 작동하게 하기
 ```
 //  ViewController.swift
 //  Class0529_2
