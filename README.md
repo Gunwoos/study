@@ -23,6 +23,9 @@
 - [UI Guide](https://github.com/GUnwoos/study/blob/master/IOS_UI_Guide.md)
 
 #### Question
-- [1~2 week](https://github.com/Gunwoos/study/blob/master/Question_2_week.md)
-- [3 week](https://github.com/Gunwoos/study/blob/master/Question_3_week.md)
-- [Button Action](https://github.com/Gunwoos/study/blob/master/Question_Button.md)
+- Swift
+  - [1 week](https://github.com/Gunwoos/study/blob/master/Question_2_week.md)
+  - [2 week](https://github.com/Gunwoos/study/blob/master/Question_3_week.md)
+  - [3 week](https://github.com/Gunwoos/study/blob/master/Question_4_week.md)
+- IOS
+  - [Button Action](https://github.com/Gunwoos/study/blob/master/Question_Button.md)
