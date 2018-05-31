@@ -55,4 +55,30 @@ print("\(array.reduce(0){(sum, next)in sum+next })")
 
 // practice 4. 1~3 을 한번에 하기
 print("\(array.enumerated().map{$0*$1}.filter{$0%2==0}.reduce(1){(sum,next) in sum+next})\n")
+
+```
+
+### Q. map 과 flatMap 을 이용하여 다음 결과를 출력해보세요.
+	1. [[Optional(1), Optional(2), Optional(3)], [nil, Optional(5)], [Optional(6),nil], [nil, nil]]
+	2. [[1, 2, 3], [5], [6], []]  
+	3. [Optional(1), Optional(2), Optional(3), nil, Optional(5), Optional(6), nil,nil, nil] 
+	4. [1, 2, 3, 5, 6]
+```
+let bArray : [[Int?]] = [[1,2,3],[nil,5],[6,nil],[nil,nil]]
+
+print(1)
+print(bArray.compactMap({$0}))
+print("")
+ 
+print(2)
+print(bArray.map(({$0.compactMap({$0})})))
+print("")
+
+print(3)
+print(bArray.flatMap{ $0 })
+print("")
+
+print(4)
+print(bArray.flatMap{ $0 }.compactMap{ $0 })
+print("")
 ```
