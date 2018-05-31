@@ -77,4 +77,5 @@ num.flatMap{$0} // [1,2,3,nil,4,5,nil,nil,nil]
 ```
 let num = [1, nil, 2, 3]
 num.compactMap{$0} // [1,2,3]
+// num 의 요소가 nil 이면 제거 후 새 collection 을 만듬
 ```
