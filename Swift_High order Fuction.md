@@ -47,13 +47,21 @@ array.forEach{index in
 //  public func map<T>(_ transform: (Element) throws -> T) rethrows -> [T]
 
 let num = Array[1, 2, 3, 4, 5]
-num.map{$0+1} // [2, 3, 4, 5, 6]
+num.map({ (number:Int) -> Int in
+	return num + 1
+})
+// num.map{$0+1} // [2, 3, 4, 5, 6]
 ```
 ### filter
 - collection 각 요소를 필터링 하여 참이 되는 값을 새 collection 으로 반환
 ```
 let num = Array[1, 2, 3, 4, 5]
-num.filter{$0%2==0}
+
+num.filter({(num:Int) -> Bool in
+	return num%2==0
+})
+
+// num.filter{$0%2==0}
 ```
 
 ### reduce
@@ -61,9 +69,9 @@ num.filter{$0%2==0}
 - ex) Array[Int] → Int
 ```
 let num = Array[1, 2, 3, 4, 5]
-num.reduce(0){(sum,next)  
-	in return sum + next
-}
+num.reduce(0, {(sum : Int,next : Int) -> Int  in 
+	return sum + next
+})
 num.reduce(0){$0+$1} // 동일 내용
 num.reduce(0,+) // 동일 내용
 ```
