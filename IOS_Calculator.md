@@ -38,34 +38,39 @@ class ViewController: UIViewController {
         let calView = UIView(frame: CGRect(x: 0, y: 15, width: Int(view.frame.width), height: Int(view.frame.height)-15))
         calView.backgroundColor = .black
         
-        resultLabel.backgroundColor = .lightGray
+        resultLabel.backgroundColor = .black
         resultLabel.text = "0"
-        resultLabel.font = UIFont.boldSystemFont(ofSize: 40)
+        resultLabel.textColor = .white
+        resultLabel.font = UIFont.boldSystemFont(ofSize: 100)
         resultLabel.textAlignment = .right
         
         
-        let clearButton = makeButton(xline: 0, yline: 2, frame: CGRect(x: 0, y: 0, width: 0, height: 0),.red)
-        let absoluteButton = makeButton(xline: 1, yline: 2, frame: CGRect(x: 0, y: 0, width: 0, height: 0),.gray)
-        let remainderButton = makeButton(xline: 2, yline: 2, frame: CGRect(x: 0, y: 0, width: 0, height: 0),.gray)
-        let divideButton = makeButton(xline: 3, yline: 2, frame: CGRect(x: 0, y: 0, width: 0, height: 0),.gray)
+        let clearButton = makeButton(xline: 0, yline: 2, frame: CGRect(x: 0, y: 0, width: 0, height: 0),.lightGray)
+        clearButton.setTitleColor(UIColor.black, for: .normal)
+        let absoluteButton = makeButton(xline: 1, yline: 2, frame: CGRect(x: 0, y: 0, width: 0, height: 0),.lightGray)
+        absoluteButton.setTitleColor(UIColor.black, for: .normal)
+        let remainderButton = makeButton(xline: 2, yline: 2, frame: CGRect(x: 0, y: 0, width: 0, height: 0),.lightGray)
+        remainderButton.setTitleColor(UIColor.black, for: .normal)
+        
+        let divideButton = makeButton(xline: 3, yline: 2, frame: CGRect(x: 0, y: 0, width: 0, height: 0),.orange)
         let num7Button = makeButton(xline: 0, yline: 3, frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         let num8Button = makeButton(xline: 1, yline: 3, frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         let num9Button = makeButton(xline: 2, yline: 3, frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-        let multiplyButton = makeButton(xline: 3, yline: 3, frame: CGRect(x: 0, y: 0, width: 0, height: 0),.gray)
+        let multiplyButton = makeButton(xline: 3, yline: 3, frame: CGRect(x: 0, y: 0, width: 0, height: 0),.orange)
         let num4Button = makeButton(xline: 0, yline: 4, frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         let num5Button = makeButton(xline: 1, yline: 4, frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         let num6Button = makeButton(xline: 2, yline: 4, frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-        let subtractionButton = makeButton(xline: 3, yline: 4, frame: CGRect(x: 0, y: 0, width: 0, height: 0),.gray)
+        let subtractionButton = makeButton(xline: 3, yline: 4, frame: CGRect(x: 0, y: 0, width: 0, height: 0),.orange)
         let num1Button = makeButton(xline: 0, yline: 5, frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         let num2Button = makeButton(xline: 1, yline: 5, frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         let num3Button = makeButton(xline: 2, yline: 5, frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-        let additionButton = makeButton(xline: 3, yline: 5, frame: CGRect(x: 0, y: 0, width: 0, height: 0),.gray)
+        let additionButton = makeButton(xline: 3, yline: 5, frame: CGRect(x: 0, y: 0, width: 0, height: 0),.orange)
         let num0Button = UIButton(frame: CGRect(x: 0, y: Int(view.frame.minY)+(Int(view.frame.width)/4*6), width: Int(view.frame.width)/2, height: Int(view.frame.width)/4))
-        num0Button.backgroundColor = .orange
-        num0Button.layer.cornerRadius = 30
+        num0Button.backgroundColor = .darkGray
+        num0Button.layer.cornerRadius = 50
 
-        let getButton = makeButton(xline: 3, yline: 6, frame: CGRect(x: 0, y: 0, width: 0, height: 0),.gray)
-        let dotButton = makeButton(xline: 2, yline: 6, frame: CGRect(x: 0, y: 0, width: 0, height: 0), .gray)
+        let getButton = makeButton(xline: 3, yline: 6, frame: CGRect(x: 0, y: 0, width: 0, height: 0),.orange)
+        let dotButton = makeButton(xline: 2, yline: 6, frame: CGRect(x: 0, y: 0, width: 0, height: 0), .darkGray)
         
         clearButton.setTitle("C", for: .normal)
         absoluteButton.setTitle("+/-", for: .normal)
@@ -126,14 +131,13 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    @objc func makeButton(xline : Int = 1, yline : Int = 1, frame : CGRect,_ color : UIColor = .orange)->UIButton{
+    @objc func makeButton(xline : Int = 1, yline : Int = 1, frame : CGRect,_ color : UIColor = .darkGray)->UIButton{
         let newButton = UIButton(frame: setFrame(Int(view.frame.minX) + (Int(view.frame.width)/4*xline), Int(view.frame.minY)+(Int(view.frame.width)/4*yline), Int(view.frame.width)/4, Int(view.frame.width)/4 ))
         newButton.backgroundColor = color
-        newButton.layer.cornerRadius = 30
+        newButton.layer.cornerRadius = 50
         return newButton
     }
     @objc func setFrame(_ x: Int,_ y: Int,_ width: Int,_ height: Int)->CGRect{
-        print("---setFrame()---")
         return CGRect(x: x, y: y, width: width, height: height)
     }
 
@@ -377,6 +381,5 @@ class ViewController: UIViewController {
         self.resultLabel.text = self.resultLabel.text! + num
     }
 }
-
 
 ```
