@@ -12,6 +12,8 @@
 - collection 전용 for 문
 - forEach 형식
 ```
+// public func forEach(_ body: (Element) throws -> Void) rethrows
+
 array.forEach{index in
 	code
 }
@@ -42,6 +44,8 @@ array.forEach{index in
 ### Map
 - collection 각 요소에 동일 연산 후 새 collection 을 반환
 ```
+//  public func map<T>(_ transform: (Element) throws -> T) rethrows -> [T]
+
 let num = Array[1, 2, 3, 4, 5]
 num.map{$0+1} // [2, 3, 4, 5, 6]
 ```
