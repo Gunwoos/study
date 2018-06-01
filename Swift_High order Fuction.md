@@ -14,9 +14,10 @@
 ```
 // public func forEach(_ body: (Element) throws -> Void) rethrows
 
-array.forEach{index in
-	code
-}
+let numbers = [1,2,3,4,5,6,7,8,9]
+numbers.forEach({(num:Int) in
+	print("3 * \(num) = \(3*num)")
+})
 ```
 - for문 과의 차이점
 	- for 문은 조건을 주어 중간에 종료할 수 있는데 forEach 문은 해당 index 에 대한 함수만 종료되고 끝까지 실행이 된다.
