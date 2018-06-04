@@ -2,7 +2,7 @@
 
 ### Simple Example
 
-##### ViewController
+##### ViewController.swift
 ```
 //
 //  ViewController.swift
@@ -92,7 +92,7 @@ class ViewController: UIViewController {
 ```
 
 
-##### SecondViewController
+##### SecondViewController.swift
 ```
 //
 //  SecondViewController.swift
@@ -204,7 +204,7 @@ class SecondViewController: UIViewController {
 
 ```
 
-##### ThirdViewController
+##### ThirdViewController.swift
 ```
 //
 //  ThirdViewController.swift
