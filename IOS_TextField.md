@@ -31,19 +31,20 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         
         
-        textLabel.backgroundColor = .orange
+        textLabel.backgroundColor = .white
         textLabel.textAlignment = .center
-        textLabel.text = ""
+        textLabel.text = "여기에 입력 됩니다"
         textLabel.textColor = .red
         
         view.addSubview(textLabel)
         
-        
-        
         textField.backgroundColor = .cyan
         textField.textAlignment = .center
         textField.placeholder = "입력하시오"
+        textField.addTarget(self, action: #selector(blueText), for: UIControlEvents.editingDidBegin)
         textField.addTarget(self, action: #selector(setText), for: UIControlEvents.editingChanged)
+        textField.addTarget(self, action: #selector(redText), for: UIControlEvents.editingDidEnd)
+        textField.addTarget(self, action: #selector(exitTextField), for: UIControlEvents.editingDidEndOnExit)
         
         view.addSubview(textField)
         
@@ -51,6 +52,7 @@ class ViewController: UIViewController {
         saveButton.backgroundColor = .white
         saveButton.setTitleColor(.blue, for: .normal)
         saveButton.setTitle("Save", for: .normal)
+        saveButton.setTitleColor(.red, for: .highlighted)
         saveButton.addTarget(self, action: #selector(nextView), for: .touchUpInside)
         
         view.addSubview(saveButton)
@@ -80,8 +82,18 @@ class ViewController: UIViewController {
         return CGRect(x: num1, y: num2, width: num3, height: num4)
     }
     
-    @objc func setText(){
+    @objc func blueText(){
         self.textLabel.textColor = .blue
+    }
+    
+    @objc func redText(){
+        self.textLabel.textColor = .red
+    }
+    
+    @objc func exitTextField(){
+    }
+    
+    @objc func setText(){
         self.textLabel.text = self.textField.text
         
         newSingleText.getText = self.textLabel.text!
@@ -93,7 +105,6 @@ class ViewController: UIViewController {
 
 
 }
-
 
 ```
 
@@ -152,6 +163,7 @@ class NextViewController: UIViewController {
         let backButton = UIButton(frame: makeFrame(view.frame.width/2 - 50, view.frame.minY + 500, 100, 30))
         backButton.backgroundColor = .white
         backButton.setTitleColor(.blue, for: .normal)
+        backButton.setTitleColor(.red, for: .highlighted)
         backButton.setTitle("Back", for: .normal)
         backButton.addTarget(self, action: #selector(disMissThisView), for: .touchUpInside)
         
@@ -181,5 +193,4 @@ class NextViewController: UIViewController {
     
 
 }
-
 ```
