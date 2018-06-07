@@ -25,7 +25,9 @@ class ViewController: UIViewController {
     func showLogin(){
         let myPageViewController = MyPageViewController()
         
-        present(myPageViewController, animated: true)
+        present(myPageViewController, animated: true){
+            myPageViewController.myLabel.text = self.newID
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,13 +124,13 @@ class ViewController: UIViewController {
     @objc func checkID(){
         if memberList[newID] == newPassword{
             print(" Login ")
-//            let loginOkAlert = UIAlertController(title: "", message: "Login", preferredStyle: .alert)
-//            let loginOKAction = UIAlertAction(title: "확인", style: .default)
-//            loginOkAlert.addAction(loginOKAction)
-//
-//            self.present(loginOkAlert, animated: true)
-            
-            self.showLogin()
+            let loginOkAlert = UIAlertController(title: "", message: "Login", preferredStyle: .alert)
+            let loginOKAction = UIAlertAction(title: "OK", style: .default) { _ in
+                self.showLogin()
+            }
+            loginOkAlert.addAction(loginOKAction)
+
+            self.present(loginOkAlert, animated: true)
         }
         else{
             print("ID or Password Miss")
@@ -159,6 +161,9 @@ import UIKit
 
 class MyPageViewController: UIViewController {
 
+    lazy var myLabel = UILabel(frame: CGRect(x: view.frame.width/2-50, y: view.frame.width/2-80, width: 100, height: 30))
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -166,11 +171,17 @@ class MyPageViewController: UIViewController {
         
         view.backgroundColor = .white
         
+                myLabel.text = ""
+        
+        view.addSubview(myLabel)
         
         let logOutButton = UIButton(frame: CGRect(x: view.frame.width/2-50, y: view.frame.width/2-50, width: 100, height: 30))
         logOutButton.setTitle("logout", for: .normal)
         logOutButton.setTitleColor(.black, for: .normal)
         logOutButton.setTitleColor(.blue, for: .highlighted)
+        logOutButton.layer.borderWidth = 2
+        logOutButton.layer.borderColor = UIColor.black.cgColor
+        logOutButton.layer.cornerRadius = 5
         logOutButton.addTarget(self, action: #selector(logOutPage), for: .touchUpInside)
         
         view.addSubview(logOutButton)
@@ -184,6 +195,5 @@ class MyPageViewController: UIViewController {
     @objc func logOutPage(){
         dismiss(animated: true)
     }
-
 }
 ```
