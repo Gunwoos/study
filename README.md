@@ -34,3 +34,4 @@
   - [UI View Controller](https://github.com/Gunwoos/study/blob/master/IOS_UIViewController.md)
   - [TextField Events](https://github.com/Gunwoos/study/blob/master/IOS_TextField.md)
   - [Login Page](https://github.com/Gunwoos/study/blob/master/IOS_LoginPage.md)
+  - [Drink Machine](https://github.com/Gunwoos/study/blob/master/IOS_DrinkMachine.md)
