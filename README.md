@@ -18,6 +18,7 @@
 - [Initializer](https://github.com/Gunwoos/study/blob/master/Swift_Initializer.md) 
 - [High order Function](https://github.com/Gunwoos/study/blob/master/Swift_High%20order%20Fuction.md)
 - [Singleton](https://github.com/GUnwoos/study/blob/master/Swift_Singleton.md)
+- [Delegate](https://github.com/GUnwoos/study/blob/master/Swift_Delegate.md)
 
 #### IOS App
 - [The App Life Cycle](https://github.com/Gunwoos/study/blob/master/IOS_TheAppLifeCycle.md)
