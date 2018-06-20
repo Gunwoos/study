@@ -45,5 +45,6 @@
       - [PageControll](https://github.com/Gunwoos/study/blob/master/IOS_pageControll.md)
     - TableView
       - [Simple TableView](http://github.com/Gunwoos/study/blob/master/IOS_TableView.md)
+      - [Title Section TableView](http://github.com/Gunwoos/study/blob/master/IOS_TableView2.md)
   - storyboard
     - [Button Action](https://github.com/Gunwoos/study/blob/master/IOS_StroyBoard_ButtonAction.md)
