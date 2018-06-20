@@ -40,6 +40,6 @@
     - [AutoLayout](https://github.com/Gunwoos/study/blob/master/IOS_autoLayout.md)
       - [Login Page View](https://github.com/Gunwoos/study/blob/master/IOS_loginPage_autoLayout.md)
     - [ScrollView](https://github.com/Gunwoos/study/blob/master/IOS_SimpleScrollView.md)
-    - []()
+      - [PageControll](https://github.com/Gunwoos/study/blob/master/IOS_pageControll.md)
   - storyboard
     - [Button Action](https://github.com/Gunwoos/study/blob/master/IOS_StroyBoard_ButtonAction.md)
