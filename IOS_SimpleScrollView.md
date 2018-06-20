@@ -23,6 +23,11 @@ class ViewController: UIViewController {
         scrollView.contentSize = CGSize(width: view.bounds.width*4, height: view.bounds.height)
         scrollView.isPagingEnabled = true
 
+        let kermit = UIImageView()
+        kermit.image = #imageLiteral(resourceName: "The-Muppets-Kermit")
+        kermit.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+        kermit.contentMode = .scaleToFill
+        
         let firstView = UIView(frame: CGRect(x: scrollView.bounds.minX+view.bounds.width*2, y: scrollView.bounds.minY, width: view.bounds.width, height: view.bounds.height))
         let secondView = UIView(frame: CGRect(x: scrollView.bounds.minX+view.bounds.width, y: scrollView.bounds.minY, width: view.bounds.width, height: view.bounds.height))
         firstView.backgroundColor = .cyan
@@ -30,16 +35,10 @@ class ViewController: UIViewController {
 
 
         view.addSubview(scrollView)
-
-        scrollView.addSubview(firstView)
-        scrollView.addSubview(secondView)
-        
-        let kermit = UIImageView()
-        kermit.image = #imageLiteral(resourceName: "The-Muppets-Kermit")
-        kermit.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-        kermit.contentMode = .scaleToFill
         
         scrollView.addSubview(kermit)
+        scrollView.addSubview(firstView)
+        scrollView.addSubview(secondView)
         
         
     }
