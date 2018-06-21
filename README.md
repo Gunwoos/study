@@ -46,6 +46,6 @@
     - TableView
       - [Simple TableView](http://github.com/Gunwoos/study/blob/master/IOS_TableView.md)
       - [Title Section TableView](https://github.com/Gunwoos/study/blob/master/IOS_TableView_Section.md)
-      - [RefreshControl](http://github.com/Gunwoos/study/blob/master/IOS_tableView_refresh.md)
+      - [RefreshControl](https://github.com/Gunwoos/study/blob/master/IOS_tableView_refreshControl.md)
   - storyboard
     - [Button Action](https://github.com/Gunwoos/study/blob/master/IOS_StroyBoard_ButtonAction.md)
