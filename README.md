@@ -17,8 +17,10 @@
 - [Type Casting](https://github.com/Gunwoos/study/blob/master/Swift_Typecasting.md) 
 - [Initializer](https://github.com/Gunwoos/study/blob/master/Swift_Initializer.md) 
 - [High order Function](https://github.com/Gunwoos/study/blob/master/Swift_High%20order%20Fuction.md)
-- [Singleton](https://github.com/GUnwoos/study/blob/master/Swift_Singleton.md)
-- [Delegate](https://github.com/GUnwoos/study/blob/master/Swift_Delegate.md)
+- [Singleton](https://github.com/Gunwoos/study/blob/master/Swift_Singleton.md)
+- [Delegate](https://github.com/Gunwoos/study/blob/master/Swift_Delegate.md)
+- Linked List
+  - [Single Linked List](https://github.com/Gunwoos/study/blob/master/Swift_singleLinkedList.md)
 
 #### IOS App
 - [The App Life Cycle](https://github.com/Gunwoos/study/blob/master/IOS_TheAppLifeCycle.md)
