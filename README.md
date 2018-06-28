@@ -33,7 +33,7 @@
   - [2 week](https://github.com/Gunwoos/study/blob/master/Question_3_week.md)
   - [3 week](https://github.com/Gunwoos/study/blob/master/Question_4_week.md)
 - IOS
-  - only code
+  - By code
     - [Button Action](https://github.com/Gunwoos/study/blob/master/Question_Button.md)
     - [Calculator](https://github.com/Gunwoos/study/blob/master/IOS_Calculator.md)
     - [UI View Controller](https://github.com/Gunwoos/study/blob/master/IOS_UIViewController.md)
@@ -51,5 +51,6 @@
       - [Title Section TableView](https://github.com/Gunwoos/study/blob/master/IOS_TableView_Section.md)
       - [AccessoryType](https://github.com/Gunwoos/study/blob/master/IOS_tableView_accessoryType.md)
       - [RefreshControl](https://github.com/Gunwoos/study/blob/master/IOS_tableView_refreshControl.md)
-  - storyboard
+  - Use storyboard
     - [Button Action](https://github.com/Gunwoos/study/blob/master/IOS_StroyBoard_ButtonAction.md)
+    - [GuestureViewController]()
