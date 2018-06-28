@@ -21,6 +21,7 @@
 - [Delegate](https://github.com/Gunwoos/study/blob/master/Swift_Delegate.md)
 - Linked List
   - [Single Linked List](https://github.com/Gunwoos/study/blob/master/Swift_singleLinkedList.md)
+  - [Double Linked List](https://)
 - [BubbleSort](https://github.com/Gunwoos/study/blob/master/Swift_BubbleSort.md)
 
 #### IOS App
