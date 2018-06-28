@@ -53,4 +53,4 @@
       - [RefreshControl](https://github.com/Gunwoos/study/blob/master/IOS_tableView_refreshControl.md)
   - Use storyboard
     - [Button Action](https://github.com/Gunwoos/study/blob/master/IOS_StroyBoard_ButtonAction.md)
-    - [GuestureViewController]()
+    - [GuestureViewController](https://github.com/Gunwoos/study/blob/master/IOS_GuestureViewController.md)
