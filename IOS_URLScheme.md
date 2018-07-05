@@ -1,3 +1,31 @@
+# URLScheme
+- A app 에서 B app 에게 data 를 전달하거나 호출 할 때 사용되어짐
+- 단 다른 app 의 URL Scheme 를 알아야 함
+- iPhone 내부의 앱들은 접근 가능
+
+### How to use 
+```
+    guard let mailURL = URL(string: "mailto://") else { return } // mailto: 가 있는지 guard 문으로 검증
+    
+    if UIApplication.shared.canOpenURL(mailURL){ // 검증 되었는지 한번 더 확인 
+        UIApplication.shared.open(mailURL) 
+    }
+```
+
+### URLScheme sample
+
+- 전화 - tel://010-0000-0000
+- 페이스타임 - facetime://010-0000-0000
+- 애플맵 검색 텍스트 - http://maps.apple.com?q=searchText
+- 애플맵 (위경도 지정) - http://maps.apple.com/?ll=latitude,longitude
+- 앱스토어 (구글맵) - https://itunes.apple.com/kr/app/google-maps/id5850273547mt=8
+- 유투브 - https://www.youtube.com/watch?v=BzYnNdJhZQw
+
+
+
+### URLScheme Example
+#### ViewController
+
 ```
 //
 //  ViewController.swift
@@ -79,16 +107,5 @@ final class ViewController: UIViewController {
     
   }
 }
-
-/*
- 전화 - tel://010-0000-0000
- 페이스타임 - facetime://010-0000-0000
- 애플맵 검색 텍스트 - http://maps.apple.com?q=searchText
- 애플맵 (위경도 지정) - http://maps.apple.com/?ll=latitude,longitude
- 앱스토어 (구글맵) - https://itunes.apple.com/kr/app/google-maps/id5850273547mt=8
- 유투브 - https://www.youtube.com/watch?v=BzYnNdJhZQw
-*/
-
-
 
 ```
