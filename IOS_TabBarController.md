@@ -1,4 +1,45 @@
-#### TabBarController Storyboard
+# NotificationCenter
+---
+
+-   인스턴스 간의 데이터를 주고받는 방식
+-   **발송자(Notification Center)**: 특정 이벤트가 발생 하였음을 불특정 다수의 객체에게 알리기 위해 사용하는 클래스
+-   **수신자(Observer)**: 어떤 객체라도 특정 이벤트가 발생했다는 알림을 받을 것이라고 관찰자(Observer)로 등록을 해두면 노티피케이션 센터가 모든 관찰자 객체에게 알림을 준다.
+-   UserDefaults처럼 모든 app이 하나씩 가지고 있다.
+- **Notification** 이란 단위로 알림을 하나의 객체에 등록하여 변동사항을 다른 여러 객체들에게 전달하고 싶을 때
+- __단__ Notification 생성 후 제거하지 않으면 __메모리 누수__ 가 발생 
+
+### Notification 생성
+- 생성은 알림을 받고자 하는 viewController 에서 해줌
+```
+let myNoti = Notification.Name.init("myNoti") // 전역변수로 생성하기 때문에 좋은 방법은 아님
+
+extension Notification.Name{ // 확장하여 사용하기에 아래 방법을 권장
+    static let myNoti2 = Notification.Name.init("myNoti2")
+}
+```
+### Notification data 전달
+```
+//1
+NotificationCenter.default.post(<#T##notification: Notification##Notification#>)
+
+//2
+NotificationCenter.default.post(
+    name: <#T##NSNotification.Name#>, 
+    object: <#T##Any?#> // 전달할 data를 object에 담아 any type 으로 전달 
+    )
+    
+//3
+NotificationCenter.default.post(
+    name: <#T##NSNotification.Name#>, 
+    object: <#T##Any?#>, 
+    userInfo: <#T##[AnyHashable : Any]?#>  // 전달할 data를 userInfo 로 dictionary type 으로 전달
+    )
+
+```
+
+### NotificationCenter & TabBarController Example
+
+#### TabBarController Storyboard Image
 
 <img width="889" alt="main storyboard 2018-07-05 17-21-18" src="https://user-images.githubusercontent.com/39073993/42311102-038a2ca4-8078-11e8-8895-de8fec50422d.png">
 
