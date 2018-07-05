@@ -1,4 +1,6 @@
-![Image of TabBar storyboard](<img width="889" alt="main storyboard 2018-07-05 17-21-18" src="https://user-images.githubusercontent.com/39073993/42311102-038a2ca4-8078-11e8-8895-de8fec50422d.png">)
+#### TabBarController Storyboard
+
+<img width="889" alt="main storyboard 2018-07-05 17-21-18" src="https://user-images.githubusercontent.com/39073993/42311102-038a2ca4-8078-11e8-8895-de8fec50422d.png">
 
 #### Item1ViewController
 
