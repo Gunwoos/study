@@ -1,5 +1,21 @@
-### ViewController.swift
+# GestureViewController
+- user 의 gesture action 을 받아 동작
 
+### Gesture 종류
+- Tap
+    - double tap or multiple-touch
+- Pinch
+- Rotation
+- Swipe
+- Pan
+    - pan dragging
+- Screen Edge Pan
+    - pan dragging gestures that start near an edge of the screen.
+- Long Press
+    - long press gestures, based on the number and duration of taps.
+- Custom Gesture
+
+### ViewController.swift
 ```
 //
 //  ViewController.swift
@@ -67,11 +83,11 @@ class ViewController: UIViewController {
 
 ```
 
-###  GuestureViewController.swift
+###  GestureViewController.swift
 
 ```
 //
-//  GuestureViewController.swift
+//  GestureViewController.swift
 //  Class0626_01
 //
 //  Created by 임건우 on 2018. 6. 26..
@@ -80,7 +96,7 @@ class ViewController: UIViewController {
 
 import UIKit
 
-class GuestureViewController: UIViewController {
+class GestureViewController: UIViewController {
 
     @IBOutlet weak var sickKermit: UIImageView!
     var imageMax = true
