@@ -2,6 +2,9 @@
 
 <img width="889" alt="main storyboard 2018-07-05 17-21-18" src="https://user-images.githubusercontent.com/39073993/42311102-038a2ca4-8078-11e8-8895-de8fec50422d.png">
 
+1. ViewController 7개를 관리하는 TabBarController 만들기
+2. Item2ViewController 에서 RGB 값을 Item3ViewController 에 전달하여 Item3ViewController 의 myView 배경색 바꾸기 
+
 #### Item1ViewController
 
 ```
