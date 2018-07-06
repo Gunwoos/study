@@ -1,3 +1,21 @@
+#  RefreshControl
+---
+- data 에 변동사항이 있을 때
+
+### RefreshControl 생성
+```
+let refreshControl = UIRefreshControl()
+refreshControl.attributedTitle = NSAttributedString(string: "Refreshing...") // refresh 될 때 나오는 String 지정
+refreshControl.tintColor = .blue // tint 색상 지정
+refreshControl.addTarget(
+    self, // target 지정
+    action: #selector(reloadData), // action 이 이루어질때 동작할 함수 지정
+    for: .valueChanged // 어떤 action 인지 지정
+    ) 
+tableView.refreshControl = refreshControl  // 
+```
+
+#### ViewController
 ```
 //
 //  ViewController.swift
