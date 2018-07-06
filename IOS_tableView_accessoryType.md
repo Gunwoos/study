@@ -1,3 +1,33 @@
+# AccessoryType
+- tableView 의 각 cell 의 accessory 를 줌
+
+### AccessoryType 종류
+- case none // don't show any accessory view
+- case disclosureIndicator // regular chevron. doesn't track
+- case detailDisclosureButton // info button w/ chevron. tracks
+- case checkmark // checkmark. doesn't track
+@available(iOS 7.0, *)
+- case detailButton // info button. tracks
+
+### AccessoryType 생성
+- UITableViewDataSource 로 확장하여 cell 의 악세사리 타입을 지정해줌
+- 악세사리 타입의 변동 사항은 delegate 에서 다뤄준다
+```
+extension ViewController : UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return kermit.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "CELL")
+        cell.textLabel?.text = String(kermit[indexPath.row])
+        cell.accessoryType = checked[indexPath.row] ? .checkmark: .none
+
+        return cell
+    }
+}
+```
+
+#### ViewController.swift
 ```
 //
 //  ViewController.swift
