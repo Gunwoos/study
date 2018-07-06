@@ -1,3 +1,22 @@
+# TableView Section
+- tablaview 에는 section 을 주어 한 section 당 n 개의 cell 을 가질 수 있다.
+- 어떠한 항목을 section 으로 지정해 그 항목이 다루는 사항을 cell 들로 지정하여 table을 구성할 수 있다.
+
+### Section 생성
+- ViewController 을 tableViewDataSource 로 extension 하여 section 의 수와 text 를 지정해줌
+```
+extension ViewController : UITableViewDataSource{
+    // section 의 수를 지정
+    func numberOfSections(in tableView: UITableView) -> Int { 
+        return Int(0)
+    }
+    // section 의 title 에 들어갈 text 를 지정
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "String"
+    }
+}
+```
+
 
 ### ViewController.swift
 
