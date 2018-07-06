@@ -1,6 +1,28 @@
 # TableView
-- 
-### ViewController
+![simulator screen shot - iphone 8 plus - 2018-07-06 at 17 27 57](https://user-images.githubusercontent.com/39073993/42368618-7862271e-8142-11e8-8a1e-ad75308aed83.png)
+
+- 위에 그림을 tableView 라고 한다
+- 어떤 항목들을 관리하기 위한 controller ex) iPhone 의 setting
+### tableView 생성
+```
+
+// tableview  생성
+let myTableView = UITableView() 
+
+// tableview frame 값 지정
+myTableView.frame = CGRect(
+    x: <#T##CGFloat#>, 
+    y: <#T##CGFloat#>, 
+    width: <#T##CGFloat#>, 
+    height: <#T##CGFloat#>
+    )
+    
+// view 에 tableView 추가
+view.addSubview(tableView)
+```
+
+### Sample code
+#### ViewController
 ```
 //
 //  ViewController.swift
