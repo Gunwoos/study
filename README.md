@@ -19,8 +19,14 @@
 - [High order Function](https://github.com/Gunwoos/study/blob/master/Swift_High%20order%20Fuction.md)
 - [Singleton](https://github.com/Gunwoos/study/blob/master/Swift_Singleton.md)
 - [Delegate](https://github.com/Gunwoos/study/blob/master/Swift_Delegate.md)
+- [Data Structure]()
+- [ARC]()
+- [Textual Representations]()
+- [Generics]()
+- [GCD]()
+- [Error Handling](https://github.com/Gunwoos/study/blob/master/IOS_ErrorHandling.md)
 
-#### IOS App
+#### IOS
 - [The App Life Cycle](https://github.com/Gunwoos/study/blob/master/IOS_TheAppLifeCycle.md)
 - [UI Guide](https://github.com/GUnwoos/study/blob/master/IOS_UI_Guide.md)
 - [UI View Controller](https://github.com/Gunwoos/study/blob/master/IOS_UIViewController.md)
