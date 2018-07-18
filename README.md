@@ -48,7 +48,7 @@
   - [TabBarController](https://github.com/Gunwoos/study/blob/master/IOS_TabBarController.md)
   - [Notification](https://github.com/Gunwoos/study/blob/master/IOS_TabBarController.md)
 
-#### Question
+#### Task
 - Swift
   - [1 week](https://github.com/Gunwoos/study/blob/master/Question_2_week.md)
   - [2 week](https://github.com/Gunwoos/study/blob/master/Question_3_week.md)
